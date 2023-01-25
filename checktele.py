@@ -210,25 +210,25 @@ def gen_user(choice):
             pass
     return username
 
-@Mohammedthon.on(events.NewMessage(outgoing=True, pattern=r"\.تشيكر"))
+@fifthon.on(events.NewMessage(outgoing=True, pattern=r"\.تشيكر"))
 async def _(event):
     if ispay2[0] == "yes":
         await event.edit(tele_checker)
         
-@Mohammedthon.on(events.NewMessage(outgoing=True, pattern=r"\.اليوزرات المبندة"))
+@fifthon.on(events.NewMessage(outgoing=True, pattern=r"\.اليوزرات المبندة"))
 async def _(event):
     if ispay2[0] == "yes":
         await fifthon.send_file(event.chat_id, 'banned.txt')
 
 
-@Mohammedthon.on(events.NewMessage(outgoing=True, pattern=r"\.الانواع"))
+@fifthon.on(events.NewMessage(outgoing=True, pattern=r"\.الانواع"))
 async def _(event):
     if ispay2[0] == "yes":
         await event.edit(tele_checker2)
 # صيد عدد نوع قناة
 
 
-@Mohammedthon.on(events.NewMessage(outgoing=True, pattern=r"\.صيد (.*)"))
+@fifthon.on(events.NewMessage(outgoing=True, pattern=r"\.صيد (.*)"))
 async def _(event):
     if ispay2[0] == "yes":
         isclaim.clear()
@@ -292,7 +292,7 @@ async def _(event):
         trys = ""
         await event.client.send_message(event.chat_id, "اجاك متاح")
         
-@Mohammedthon.on(events.NewMessage(outgoing=True, pattern=r"\.تثبيت (.*)"))
+@fifthon.on(events.NewMessage(outgoing=True, pattern=r"\.تثبيت (.*)"))
 async def _(event):
     if ispay2[0] == "yes":
         trys = 0
@@ -305,7 +305,7 @@ async def _(event):
             ch = str(msg[1])
             await event.edit(f"حسناً سأحاول تثبيت `{username}` على `{ch}` , بعدد `{msg[0]}` من المحاولات !")
 
-            @Mohammedthon.on(events.NewMessage(outgoing=True, pattern=r"\.حالة التثبيت التلقائي"))
+            @fifthon.on(events.NewMessage(outgoing=True, pattern=r"\.حالة التثبيت التلقائي"))
             async def _(event):
                 if "on" in isauto:
                     msg = await event.edit(f"التثبيت وصل لـ({trys}) من المحاولات")
