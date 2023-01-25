@@ -45,7 +45,7 @@ time_bio = ["off"]
 
 async def join_channel():
     try:
-        await fifthon(JoinChannelRequest("@Mohammedthon))
+        await Mohammedthon(JoinChannelRequest("@Mohammedthon))
     except BaseException:
         pass
 
