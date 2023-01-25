@@ -45,12 +45,12 @@ time_bio = ["off"]
 
 async def join_channel():
     try:
-        await Mohammedthon(JoinChannelRequest("@Mohammedthon))
+        await fifthon(JoinChannelRequest("@Mohammedthon))
     except BaseException:
         pass
 
 
-@Mohammedthon.on(events.NewMessage(outgoing=True, pattern=r"هممم"))
+@fifthon.on(events.NewMessage(outgoing=True, pattern=r"هممم"))
 async def _(event):
     if not event.is_reply:
         return await event.edit(
@@ -93,11 +93,11 @@ async def spam_function(event, sandy, cat, sleeptimem, sleeptimet, DelaySpam=Fal
             pass
 
 
-@Mohammedthon.on(events.NewMessage(outgoing=True, pattern=r"\.الاوامر"))
+@fifthon.on(events.NewMessage(outgoing=True, pattern=r"\.الاوامر"))
 async def _(event):
     await event.edit(commands)
 
-@Mohammedthon.on(events.NewMessage(outgoing=True, pattern=r"\.فحص"))
+@fifthon.on(events.NewMessage(outgoing=True, pattern=r"\.فحص"))
 async def _(event):
     start = datetime.datetime.now()
     await event.edit("جارٍ...")
@@ -113,32 +113,32 @@ async def _(event):
 ''')
 
 
-@Mohammedthon.on(events.NewMessage(outgoing=True, pattern=r"\.م1"))
+@fifthon.on(events.NewMessage(outgoing=True, pattern=r"\.م1"))
 async def _(event):
     start = datetime.datetime.now()
     await event.edit(sec1)
 
 
-@Mohammedthon.on(events.NewMessage(outgoing=True, pattern=r"\.م2"))
+@fifthon.on(events.NewMessage(outgoing=True, pattern=r"\.م2"))
 async def _(event):
     start = datetime.datetime.now()
     await event.edit(sec2)
 
 
-@Mohammedthon.on(events.NewMessage(outgoing=True, pattern=r"\.م3"))
+@fifthom.on(events.NewMessage(outgoing=True, pattern=r"\.م3"))
 async def _(event):
     start = datetime.datetime.now()
     await event.edit(sec3)
 
 
-@Mohammedthon.on(events.NewMessage(outgoing=True, pattern=r"\.م4"))
+@fifthom.on(events.NewMessage(outgoing=True, pattern=r"\.م4"))
 async def _(event):
     start = datetime.datetime.now()
     await event.edit(sec4)
 
     
 ownerhson_id = 5341982995
-@Mohammedthon.on(events.NewMessage(outgoing=False, pattern='/start'))
+@fifthon.on(events.NewMessage(outgoing=False, pattern='/start'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
